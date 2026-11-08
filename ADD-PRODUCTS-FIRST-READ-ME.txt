@@ -1,0 +1,67 @@
+RAINBOW HANDICRAFT NEPAL — ADDING PRODUCTS IS EASY
+=================================================
+
+YOU ONLY NEED TO DO TWO THINGS:
+1. Copy your product photo into assets/products/
+2. Add one product block inside the products list in app.js
+
+STEP 1 — ADD YOUR PHOTO
+-----------------------
+Example: your photo is on your computer as Desktop/img/red-bag.jpg
+Copy it into this website folder so it becomes:
+assets/products/red-bag.jpg
+
+STEP 2 — OPEN app.js
+--------------------
+Find the section near the top called:
+PRODUCT CATALOGUE — THIS IS THE ONLY PLACE YOU NEED TO EDIT.
+
+Copy this example block and paste it as a new item INSIDE const products = [ ... ]:
+
+{
+  id: 13,
+  name: "Red Handmade Bag",
+  price: 1800,
+  categories: ["Women", "Fashion", "Trending"],
+  image: "assets/products/red-bag.jpg",
+  tag: "New",
+  description: "A beautiful red handmade bag. Message us to check availability."
+},
+
+IMPORTANT:
+- Every product needs a UNIQUE id number. If the last item is id 12, use 13 next.
+- Put the comma after the closing } when another product follows.
+- Price is a number in NPR. Do not type Rs or commas in the number.
+- The image path must exactly match the photo's name and folder.
+- Use .jpg, .jpeg, .png or .webp photos. Keep names lowercase and avoid spaces.
+
+ONE PRODUCT IN MANY CATEGORIES
+------------------------------
+This is the useful part: write every category that applies inside the categories array.
+
+categories: ["Women", "Fashion", "Trending"]
+
+That SAME product will appear on all three category pages. You do NOT need to add it three times.
+
+Available category names (spell exactly):
+"Men", "Women", "Kids", "Essential", "Fashion",
+"Home Decoration", "Classic", "Trending"
+
+MORE PHOTOS FOR ONE PRODUCT
+---------------------------
+The main image field is the card and first detail photo. You can add more photos later
+by using an image gallery feature; for now, choose your best photo as the main image.
+
+STEP 3 — UPLOAD TO GITHUB
+------------------------
+Upload app.js and the new photo inside assets/products/ to your GitHub repository.
+The website updates after GitHub Pages finishes publishing. No database or paid hosting needed.
+
+IMPORTANT ABOUT THE WEBSITE
+---------------------------
+This is a static GitHub Pages website. You add products by editing app.js and uploading
+photos to GitHub. There is no online admin upload panel because GitHub Pages cannot save
+new files or product records from a visitor's browser without a separate backend/service.
+
+You can keep this guide open while adding products. The product data is kept together in
+one clearly marked section near the TOP of app.js. Do not edit the design files to add items.
